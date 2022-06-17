@@ -6,7 +6,7 @@ services:
   nginx:
     image: nginx:1.16.0-alpine
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx:/etc/nginx
     ports:
       - "9000:80"
 
@@ -14,10 +14,10 @@ services:
   server1:
     image: nginx:1.16.0-alpine
     volumes:
-      - ./server1.html:/usr/share/nginx/html/index.html
+      - ./server1:/usr/share/nginx/html
 
   # The web server2
   server2:
     image: nginx:1.16.0-alpine
     volumes:
-      - ./server2.html:/usr/share/nginx/html/index.html
+      - ./server2:/usr/share/nginx/html
