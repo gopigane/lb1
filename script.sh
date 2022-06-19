@@ -1,4 +1,4 @@
 ssh root@18.220.34.41 <<EOF
-  cd root/rs
-  tar -xvzf ganesh.targ.gz
+  
+  tar -xvzf /root/rs/ganesh.targ.gz
 EOF
